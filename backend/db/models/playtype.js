@@ -4,7 +4,11 @@ module.exports = (sequelize, DataTypes) => {
     playtype: DataTypes.STRING
   }, {});
   Playtype.associate = function(models) {
-    // associations can be defined here
+    Playtype.hasMany(models.Session, {
+      foreignKey: "playtypeId",
+      onDelete: "CASCADE",
+      hooks: true,
+    });
   };
   return Playtype;
 };

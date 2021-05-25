@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
-
+const genresRouter= require('./genres.js');
 
 
 router.post('/test', function(req, res) {
@@ -10,6 +10,7 @@ router.post('/test', function(req, res) {
 });
 
 
+router.use ('/genres', genresRouter)
 
 router.use('/session', sessionRouter);
 
