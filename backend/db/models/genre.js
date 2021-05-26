@@ -5,7 +5,11 @@ module.exports = (sequelize, DataTypes) => {
     {
       genre: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+      },
+      url: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
     },
     {}

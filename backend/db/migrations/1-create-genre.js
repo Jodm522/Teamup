@@ -1,4 +1,7 @@
 "use strict";
+
+const { sequelize } = require("../models");
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable("Genres", {
@@ -9,6 +12,10 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       genre: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      url: {
         type: Sequelize.STRING,
         allowNull: false,
       },
