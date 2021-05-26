@@ -34,9 +34,7 @@ function Navigation({ isLoaded }) {
           </NavLink>
         </div>
         <div className="browseButton">
-          <NavLink to="/browse" >
-            Browse
-          </NavLink>
+          <NavLink to="/browse">Browse</NavLink>
         </div>
         <div className="makeButton">
           <NavLink to="/create">Make a Session</NavLink>
@@ -50,12 +48,8 @@ function Navigation({ isLoaded }) {
       </div>
 
       <div className="login_signup">
-        <ul>
-          <li>
-            {isLoaded}
-            {sessionLinks}
-          </li>
-        </ul>
+        <div>{isLoaded}</div>
+        <div>{sessionLinks}</div>
       </div>
     </div>
   );

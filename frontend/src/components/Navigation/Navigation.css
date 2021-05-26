@@ -6,6 +6,7 @@
   --text-color: #9dbabe;
 }
 * {
+  font-size: 10;
   margin: 0;
   list-style: none;
   color: var(--text-color);
@@ -20,17 +21,16 @@ body {
 .navbar {
   display: flex;
   background-color: var(--secondary-background);
-  margin: 0px 0px 0px 0px;
-  padding: 0 0 0 0;
+  max-height: 20px;
 }
-.navbar.homeButton {
+.navbar .homeButton {
   justify-self: stretch;
   cursor: pointer;
-  object-fit: contain;
+  padding: 0px 4px 0px 0px;
 }
 img.homeButton {
-  max-width: 200px;
-  max-height: 100px;
+  max-height: 20px;
+  object-fit: contain;
 }
 .navbar .navLinks {
   padding: 0px 5px;
@@ -39,25 +39,27 @@ img.homeButton {
   align-items: center;
   justify-content: space-between;
   /* background-color: #95190c; */
+  object-fit: contain;
 }
 .navLinks .browseButton {
-  padding: 10px 5px;
-  border-left: 2px solid #082f5a;
+  padding: 4px 5px;
+  border-left: 1px solid #082f5a;
+  max-height: 20px;
 }
 .navLinks .makeButton {
-  padding: 10px 5px;
-  border-left: 2px solid #082f5a;
+  padding: 4px 5px;
+  border-left: 1px solid #082f5a;
+  border-right: 1px solid #082f5a;
 }
 
 .navbar .login_signup {
-  align-self: flex-end;
-  justify-self: flex-end;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  overflow: hidden;
+  width: 100px;
+  
   background-color: #02a9ea;
+  flex-wrap: nowrap;
 }
 .searchBar {
-  padding: 10px;
+  margin: auto;
+  width: 50%;
 }
