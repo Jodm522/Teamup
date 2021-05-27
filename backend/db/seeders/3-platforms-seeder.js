@@ -5,12 +5,12 @@ module.exports = {
     return queryInterface.bulkInsert(
       "Platforms",
       [
-        { platform: "PC" },
-        { platform: "Switch" },
-        { platform: "Tabletop" },
-        { platform: "Xbox 1" },
-        { platform: "PS4" },
-        { platform: "PS5" },
+        { platform: "PC", url: "https://imgur.com/7b58nRY" },
+        { platform: "Switch", url: "https://imgur.com/E2COj0n" },
+        { platform: "Tabletop", url: "https://imgur.com/A1RZ1y0" },
+        { platform: "Xbox 1", url: "https://imgur.com/EPC3axi" },
+        { platform: "PS4", url: "https://imgur.com/SlqKJy8" },
+        { platform: "PS5", url: "https://imgur.com/uN8H3GG" },
       ],
       {}
     );
