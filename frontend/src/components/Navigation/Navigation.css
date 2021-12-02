@@ -55,9 +55,6 @@ img.homeButton {
 .navbar .login_signup {
   overflow: hidden;
   width: 100px;
-  
-  background-color: #02a9ea;
-  flex-wrap: nowrap;
 }
 .searchBar {
   margin: auto;

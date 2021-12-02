@@ -3,9 +3,17 @@ import thunk from "redux-thunk";
 
 import sessionReducer from "./session";
 import genresReducer from "./categories";
+import platformsReducer from "./platforms";
+import playtypesReducer from "./playtypes";
+import gamesReducer from "./games"
+import createSessionReducer from "./sessions"
 const rootReducer = combineReducers({
   session: sessionReducer,
-  genres: genresReducer, //? key/value or no?
+  genres: genresReducer, 
+  platforms: platformsReducer,
+  playtypes: playtypesReducer,
+  games: gamesReducer,
+  session:createSessionReducer
 });
 
 let enhancer;

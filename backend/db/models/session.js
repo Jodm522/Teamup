@@ -4,10 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     "Session",
     {
       title: DataTypes.STRING,
-      createdBy: DataTypes.INTEGER,
-      playtype: DataTypes.INTEGER,
-      platform: DataTypes.INTEGER,
-      game: DataTypes.INTEGER,
+      userId: DataTypes.INTEGER,
+      playtypeId: DataTypes.INTEGER,
+      platformId: DataTypes.INTEGER,
+      gameId: DataTypes.INTEGER,
       date: DataTypes.DATE,
       text: DataTypes.TEXT,
     },
@@ -18,7 +18,23 @@ module.exports = (sequelize, DataTypes) => {
     Session.belongsTo(models.Game, { foreignKey: "gameId" });
     Session.belongsTo(models.Playtype, { foreignKey: "playtypeId" });
     Session.belongsTo(models.Platform, { foreignKey: "platformId" });
-
   };
+  // Session.make = async function ({
+  //   title,
+  //   genre1,
+  //   genre2,
+  //   genre3,
+  //   url,
+  //   description,
+  // }) {
+  //   const session = await Session.create({
+  //     title,
+  //     genre1,
+  //     genre2,
+  //     genre3,
+  //     url,
+  //     description,
+  //   });
+  // };
   return Session;
 };

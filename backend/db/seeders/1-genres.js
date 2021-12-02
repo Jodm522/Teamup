@@ -20,6 +20,7 @@ module.exports = {
         { genre: "Cards", url: "https://imgur.com/rsGE8x3" },
         { genre: "Co-op", url: "https://imgur.com/Gt3cwqA" },
         { genre: "Building", url: "https://imgur.com/sJBFaYf" },
+        { genre: "Fighting", url: "https://imgur.com/h9z1PBR" },
       ],
       {}
     );

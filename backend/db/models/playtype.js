@@ -1,9 +1,17 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const Playtype = sequelize.define('Playtype', {
-    playtype: DataTypes.STRING
-  }, {});
-  Playtype.associate = function(models) {
+  const Playtype = sequelize.define(
+    "Playtype",
+    {
+      playtype: { type: DataTypes.STRING, allowNull: false },
+      url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+    },
+    {}
+  );
+  Playtype.associate = function (models) {
     Playtype.hasMany(models.Session, {
       foreignKey: "playtypeId",
       onDelete: "CASCADE",

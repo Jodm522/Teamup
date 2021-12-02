@@ -5,9 +5,9 @@ module.exports = {
     return queryInterface.bulkInsert(
       "Playtypes",
       [
-        { playtype: "Casual" },
-        { playtype: "Competitive" },
-        { playtype: "Team" },
+        { playtype: "Casual", url: "https://imgur.com/pIlis41" },
+        { playtype: "Competitive", url: "https://imgur.com/d5dvzho" },
+        { playtype: "Team", url: "https://imgur.com/mPtGitn" },
       ],
       {}
     );

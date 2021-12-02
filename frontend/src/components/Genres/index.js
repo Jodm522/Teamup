@@ -1,29 +1,41 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { getCategories } from "../../store/categories";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getOneCategory } from "../../store/categories";
+import "./genresStyle.css";
+import { NavLink, Link } from "react-router-dom";
 
 function Genres() {
-  const { genreId } = useParams();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getOneCategory(genreId));
+    dispatch(getCategories());
   }, [dispatch]);
 
-  const genre = useSelector((state) => {
-    return state?.genres.genre;
+  const genres = useSelector((state) => {
+    return state?.genres;
   });
-  console.log(genre?.genre);
-  return (
-    <div>
-      {genre && (
-        <>
-          <h1 className="genreHeader">{genre.genre}</h1>
-          <div></div>
-        </>
-      )}
-    </div>
-  );
+
+  const list = genres?.list;
+  if (!genres.list) return null;
+  else
+    return (
+      <div>
+        <div className="cardsTitle">Genres</div>
+        <div className="cardContainer">
+          {list.map((genre) => (
+            <NavLink to={`/sessions/genre/${genre.id}`}>
+              <div
+                className="card"
+                style={{
+                  backgroundImage: `url("${genre.url}.jpg")`,
+                }}
+              >
+                {genre.genre}
+              </div>
+            </NavLink>
+          ))}
+        </div>
+      </div>
+    );
 }
 
 export default Genres;

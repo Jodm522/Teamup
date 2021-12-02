@@ -12,25 +12,25 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      createdBy: {
+      userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: "Users", key: "id" },
+        references: { model: "Users" },
       },
-      playtype: {
+      playtypeId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: "Playtypes", key: "id" },
+        references: { model: "Playtypes" },
       },
-      platform: {
+      platformId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: "Platforms", key: "id" },
+        references: { model: "Platforms" },
       },
-      game: {
+      gameId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        references: { model: "Games", key: "id" },
+        references: { model: "Games"},
       },
       date: {
         type: Sequelize.DATE,

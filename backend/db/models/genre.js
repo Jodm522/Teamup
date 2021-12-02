@@ -16,7 +16,17 @@ module.exports = (sequelize, DataTypes) => {
   );
   Genre.associate = function (models) {
    Genre.hasMany(models.Game, {
-     foreignKey: "genreId",
+     foreignKey: "genre1",
+     onDelete: "CASCADE",
+     hooks: true,
+   });
+   Genre.hasMany(models.Game, {
+     foreignKey: "genre2",
+     onDelete: "CASCADE",
+     hooks: true,
+   });
+   Genre.hasMany(models.Game, {
+     foreignKey: "genre3",
      onDelete: "CASCADE",
      hooks: true,
    });

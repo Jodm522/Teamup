@@ -37,15 +37,15 @@ function Navigation({ isLoaded }) {
           <NavLink to="/browse">Browse</NavLink>
         </div>
         <div className="makeButton">
-          <NavLink to="/create">Make a Session</NavLink>
+          <NavLink to="/createSession">Make a Session</NavLink>
         </div>
       </div>
-      <div className="searchBar">
+      {/* <div className="searchBar">
         <form>
           <input type="text"></input>
           <button type="submit>">go</button>
         </form>
-      </div>
+      </div> */}
 
       <div className="login_signup">
         <div>{isLoaded}</div>

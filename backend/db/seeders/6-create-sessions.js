@@ -7,10 +7,10 @@ module.exports = {
       [
         {
           title: "My DnD oneshot",
-          createdBy: 1,
-          playtype: 3,
-          platform: 3,
-          game: 1,
+          userId: 1,
+          playtypeId: 3,
+          platformId: 3,
+          gameId: 1,
           date: new Date(2021, 6, 20),
           text: "My curse of strahd game",
         },

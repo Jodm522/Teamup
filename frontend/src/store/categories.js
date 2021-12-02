@@ -14,9 +14,9 @@ const loadOne = (genre) => ({
 
 export const getOneCategory = (genreId) => async (dispatch) => {
   const res = await fetch(`/api/genres/${genreId}`);
-
+    if(res.ok){
   const genre = await res.json();
-  dispatch(loadOne(genre));
+  dispatch(loadOne(genre));}
 };
 
 export const getCategories = () => async (dispatch) => {

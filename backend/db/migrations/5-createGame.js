@@ -14,25 +14,25 @@ module.exports = {
       },
       genre1: {
         type: Sequelize.INTEGER,
-        references: { model: "Genres", key: "id" },
+        references: { model: "Genres"},
         allowNull: false,
       },
       genre2: {
         type: Sequelize.INTEGER,
-        references: { model: "Genres", key: "id" },
+        references: { model: "Genres"},
         allowNull: true,
       },
       genre3: {
         type: Sequelize.INTEGER,
-        references: { model: "Genres", key: "id" },
+        references: { model: "Genres"},
         allowNull: true,
       },
-      image: {
+      url: {
         type: Sequelize.STRING,
         allowNull: true,
       },
       description: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50000),
         allowNull: false,
       },
       createdAt: {

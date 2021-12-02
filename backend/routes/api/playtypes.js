@@ -14,8 +14,8 @@ router.get(
       "/:id",
       asyncHandler(async function (req, res) {
         const id = req.params.id;
-        const platform = await Platform.findByPk(id);
-        res.json(platform);
+        const playtype = await Playtype.findByPk(id);
+        res.json(playtype);
       })
     );
 
